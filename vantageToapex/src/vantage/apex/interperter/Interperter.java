@@ -1,9 +1,9 @@
 package vantage.apex.interperter;
 
 import java.io.IOException;
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.Properties;
-import java.util.Set;
+//import java.util.Set;
 
 
 import org.slf4j.Logger;
@@ -27,10 +27,10 @@ public class Interperter {
 			log.info("Got event " + data);
 			if (data.length() > 5){
 				int dataLength = Integer.parseInt(data.substring(0, 2),16);
-	            String messageType = data.substring(2,3);
-	            String messageSubType = data.substring(3,4);
-	            String message = data.substring(4,dataLength-2);
-	            String checksum = data.substring(dataLength,dataLength+2);
+	            //String messageType = data.substring(2,3);
+	            //String messageSubType = data.substring(3,4);
+	            //String message = data.substring(4,dataLength-2);
+	            //String checksum = data.substring(dataLength,dataLength+2);
 	            
 				if (props.containsKey("" + dataLength)){
 					String keypad = props.getProperty("" + dataLength);
